@@ -1,3 +1,16 @@
 <resources>
+
+	<!-- Usuels -->
+	<string name="oui">Oui</string>
+	<string name="non">Non</string>
+
+	<!-- Activity main -->
 	<string name="app_name">Hackathon2017Alzheimer</string>
+	<string name="notification_recu">
+		Une personne atteinte de Alzheimer se trouve en difficulté à
+		%d mètres de vous. \n Souhaitez-vous lui venir en aide ?
+	</string>
+
+
+
 </resources>
