@@ -8,6 +8,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.text.Layout;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -30,6 +31,7 @@ public class FindThePersonActivity extends FragmentActivity
 	View map;
 	LatLng maPosition, targetPosition;
 	ImageView imageTarget;
+	View buffering;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -40,8 +42,10 @@ public class FindThePersonActivity extends FragmentActivity
 		map = findViewById(R.id.map);
 		SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
 		imageTarget = findViewById(R.id.ivTarget);
+		buffering = findViewById(R.id.layoutBuffering);
 
-		map.setVisibility(View.INVISIBLE);
+		changeVisibilityGivenLoading(true);
+
 
 		maPosition = new LatLng(43.668856, 7.219177);
 		targetPosition = new LatLng(43.668920, 7.219156);
@@ -53,7 +57,7 @@ public class FindThePersonActivity extends FragmentActivity
 			@Override
 			public void onMapReady(GoogleMap googleMap)
 			{
-				map.setVisibility(View.VISIBLE);
+				changeVisibilityGivenLoading(true);
 
 
 				googleMap.addMarker(new MarkerOptions().title("Vous").position(maPosition));
@@ -80,5 +84,21 @@ public class FindThePersonActivity extends FragmentActivity
 		Drawable drawableResized = resizeTargetImage(drawable);
 		drawableResized.setAlpha(180);
 		imageTarget.setImageDrawable(drawableResized);
+	}
+
+	private void changeVisibilityGivenLoading(boolean isLoaded)
+	{
+		if(isLoaded)
+		{
+			buffering.setVisibility(View.INVISIBLE);
+			imageTarget.setVisibility(View.VISIBLE);
+			map.setVisibility(View.VISIBLE);
+		}
+		else
+		{
+			buffering.setVisibility(View.VISIBLE);
+			imageTarget.setVisibility(View.INVISIBLE);
+			map.setVisibility(View.INVISIBLE);
+		}
 	}
 }

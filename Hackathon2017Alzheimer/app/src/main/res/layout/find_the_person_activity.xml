@@ -23,6 +23,25 @@
 		android:layout_marginEnd="@dimen/margin_image_target"
 		android:layout_marginTop="@dimen/margin_image_target"/>
 
+	<LinearLayout
+		android:id="@+id/layoutBuffering"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:gravity="center"
+		android:layout_centerInParent="true">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/loading"/>
+
+		<ProgressBar
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+
+	</LinearLayout>
+
 
 
 </RelativeLayout>
