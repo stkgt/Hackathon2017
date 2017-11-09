@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
 	android:layout_height="match_parent">
 
 	<fragment
 		android:id="@+id/map"
 		android:layout_width="match_parent"
-		android:layout_height="0dp"
-		android:layout_weight="0.5"
+		android:layout_height="match_parent"
 		android:name="com.google.android.gms.maps.SupportMapFragment" />
 
+	<ImageView
+		android:id="@+id/ivTarget"
+		android:layout_width="100dp"
+		android:layout_height="wrap_content"
+		android:src="@drawable/test_image_user"
+		android:adjustViewBounds="true"
+		android:scaleType="fitStart"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentEnd="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginRight="@dimen/margin_image_target"
+		android:layout_marginEnd="@dimen/margin_image_target"
+		android:layout_marginTop="@dimen/margin_image_target"/>
 
 
-</LinearLayout>
+
+</RelativeLayout>
