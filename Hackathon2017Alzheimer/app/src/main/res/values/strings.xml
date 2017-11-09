@@ -1,3 +1,8 @@
 <resources>
 	<string name="app_name">Hackathon2017Alzheimer</string>
+
+	<!-- Main activity -->
+	<string name="mode_utilisation">Veuillez séléctionner votre mode d\'utilisation</string>
+	<string name="btn_lunette">Lunettes</string>
+
 </resources>
