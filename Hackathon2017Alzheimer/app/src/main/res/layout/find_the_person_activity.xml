@@ -42,6 +42,26 @@
 
 	</LinearLayout>
 
+	<RelativeLayout
+		android:id="@+id/viewFounded"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:gravity="center"
+		android:paddingBottom="@dimen/margin_image_target">
+
+		<TextView
+			android:padding="@dimen/margin_tv"
+			android:textSize="@dimen/h3_text"
+			android:id="@+id/btnTrouve"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/jai_trouvé"
+			android:background="@color/fond_texte" />
+
+	</RelativeLayout>
+
+
 
 
 </RelativeLayout>

@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.mikea.hackathon2017alzheimer.R;
+import com.example.mikea.hackathon2017alzheimer.Vue.Utilitaires.ActivitiesLauncher;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -31,7 +32,8 @@ public class FindThePersonActivity extends FragmentActivity
 	View map;
 	LatLng maPosition, targetPosition;
 	ImageView imageTarget;
-	View buffering;
+	View buffering, founded;
+	Activity activity;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -40,12 +42,15 @@ public class FindThePersonActivity extends FragmentActivity
 		setContentView(R.layout.find_the_person_activity);
 
 		map = findViewById(R.id.map);
-		SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
 		imageTarget = findViewById(R.id.ivTarget);
 		buffering = findViewById(R.id.layoutBuffering);
+		founded = findViewById(R.id.viewFounded);
+
+		SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
 
 		changeVisibilityGivenLoading(true);
 
+		activity = this;
 
 		maPosition = new LatLng(43.668856, 7.219177);
 		targetPosition = new LatLng(43.668920, 7.219156);
@@ -64,10 +69,18 @@ public class FindThePersonActivity extends FragmentActivity
 				googleMap.addMarker(new MarkerOptions().title("").position(targetPosition));
 
 				googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(maPosition, 15));
-				googleMap.animateCamera(CameraUpdateFactory.zoomTo(20), 2000, null);
+				googleMap.animateCamera(CameraUpdateFactory.zoomTo(18), 2000, null);
 			}
 		});
 
+		founded.setOnClickListener(new View.OnClickListener()
+		{
+			@Override
+			public void onClick(View view)
+			{
+				ActivitiesLauncher.launchFoundedScriptActivity(activity);
+			}
+		});
 	}
 
 

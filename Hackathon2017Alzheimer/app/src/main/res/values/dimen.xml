@@ -5,5 +5,7 @@
 	<dimen name="margin_buttonColles">30dp</dimen>
 	<dimen name="margin_image_target">10dp</dimen>
 	<dimen name="margin_between_text_and_butto">30dp</dimen>
+	<dimen name="margin_tv">5dp</dimen>
+	<dimen name="h3_text">20sp</dimen>
 
 </resources>

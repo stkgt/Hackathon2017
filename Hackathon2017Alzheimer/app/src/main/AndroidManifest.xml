@@ -34,6 +34,7 @@
 		</activity>
 
 		<activity android:name=".Vue.Activites.FindThePersonActivity" />
+		<activity android:name=".Vue.Activites.FoundedScriptActivity" />
 	</application>
 
 </manifest>

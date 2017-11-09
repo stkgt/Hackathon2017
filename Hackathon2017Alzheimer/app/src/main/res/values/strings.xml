@@ -10,6 +10,35 @@
 		Une personne atteinte de Alzheimer se trouve en difficulté à 2 mètres de vous. \n Souhaitez-vous lui venir en aide ?
 	</string>
 	<string name="loading">Veuillez patienter …</string>
+	<string name="jai_trouvé">Je l\'ai trouvé(e)</string>
+	<string name="the_found_script">
+		<![CDATA[
+		Voici Jean, il a 61 ans.
+		<br />
+		Il a actuellement des <b>troubles</b> psycho-comportementaux et de ce fait <b>il vient d\'oublier</b>
+		ce qui lui est arrivé dans un plus ou moins court terme.
+		<br />
+		Ainsi il ne sait plus pourquoi il se retrouve dans cette situation, il est <b>désorienté</b>.
+		<br />
+		<br />
+		<b>Vous devez le rassurer</b> en attendant que les secours arrivent pour s\'occuper de lui.
+		<br />
+		Pour cela, <b>soyez souriant</b> et essayer de <b>détourner son attention</b> de l\'épisode stressant
+		et dépaysant que cette personne est en train de vivre, l\'inquiéter davantage ne serait
+		vraiment pas bénéfique pour elle.
+		<br />
+		<b>C\'est une personne comme les autres</b>, vous n\'aurais pas de mal à trouver un sujet de
+		conversation.
+		<br />
+		<br />
+		<b>Grâce à vous cette personne va mieux vivre cet épisode déroutant que vivent les malades d\'
+		Alzheimer.
+		<br />
+		<br />
+		Merci pour votre civilité.</b>
+		]]>
+
+	</string>
 
 
 
