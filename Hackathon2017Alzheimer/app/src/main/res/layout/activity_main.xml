@@ -4,7 +4,7 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	tools:context="com.example.mikea.hackathon2017alzheimer.MainActivity"
+	tools:context="com.example.mikea.hackathon2017alzheimer.Vue.Activites.MainActivity"
 	android:orientation="vertical">
 
 	<View
@@ -30,34 +30,23 @@
 		<LinearLayout
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:orientation="horizontal">
-
-			<View
-				android:layout_width="0dp"
-				android:layout_height="0dp"
-				android:layout_weight="0.2"/>
+			android:orientation="horizontal"
+			android:layout_gravity="center">
 
 			<Button
+				android:id="@+id/btnOui"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:textAllCaps="false"
 				android:text="@string/oui"/>
 
-			<View
-				android:layout_width="0dp"
-				android:layout_height="0dp"
-				android:layout_weight="0.5"/>
-
 			<Button
+				android:id="@+id/btnNon"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:textAllCaps="false"
-				android:text="@string/non"/>
-
-			<View
-				android:layout_width="0dp"
-				android:layout_height="0dp"
-				android:layout_weight="0.2"/>
+				android:text="@string/non"
+				android:layout_marginLeft="@dimen/margin_buttonColles"/>
 
 		</LinearLayout>
 
