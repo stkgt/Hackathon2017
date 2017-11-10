@@ -25,7 +25,7 @@
 			android:value="AIzaSyD_ZgnbO09FLw4amqJ_SY7L3I2m9MkDDFY"/>
 
 
-		<activity android:name=".Vue.Activites.MainActivity">
+		<activity android:name=".Vue.Activites.FakeNotificationActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 
@@ -33,6 +33,7 @@
 			</intent-filter>
 		</activity>
 
+		<activity android:name=".Vue.Activites.MainActivity"/>
 		<activity android:name=".Vue.Activites.FindThePersonActivity" />
 		<activity android:name=".Vue.Activites.FoundedScriptActivity" />
 	</application>

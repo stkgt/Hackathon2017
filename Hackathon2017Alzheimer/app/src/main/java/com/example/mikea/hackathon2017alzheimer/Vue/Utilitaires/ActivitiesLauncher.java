@@ -5,6 +5,7 @@ import android.content.Intent;
 
 import com.example.mikea.hackathon2017alzheimer.Vue.Activites.FindThePersonActivity;
 import com.example.mikea.hackathon2017alzheimer.Vue.Activites.FoundedScriptActivity;
+import com.example.mikea.hackathon2017alzheimer.Vue.Activites.MainActivity;
 
 /**
  * Created by Mike AUBENAS on 09/11/2017.
@@ -12,6 +13,12 @@ import com.example.mikea.hackathon2017alzheimer.Vue.Activites.FoundedScriptActiv
 
 public class ActivitiesLauncher
 {
+	public static void launchMainActivity(Activity activity)
+	{
+		Intent intent = new Intent(activity, MainActivity.class);
+		activity.startActivity(intent);
+	}
+
 	public static void launchFindThePersonActivity(Activity activity)
 	{
 		Intent intent = new Intent(activity, FindThePersonActivity.class);
